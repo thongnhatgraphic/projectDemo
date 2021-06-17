@@ -35,73 +35,61 @@
 }
 .pc-1 {
   display: block;
-  border-right: 1px solid rgba(0,0,0, .3);
   flex: 0 0 8.3333%;
   max-width: 8.3333%;
 }
 .pc-2 {
   display: block;
-  border-right: 1px solid rgba(0,0,0, .3);
   flex: 0 0 16.6667%;
   max-width: 16.6667%;
 }
 .pc-3 {
   display: block;
-  border-right: 1px solid rgba(0,0,0, .3);
   flex: 0 0 25%;
   max-width: 25%;
 }
 .pc-4 {
   display: block;
-  border-right: 1px solid rgba(0,0,0, .3);
   flex: 0 0 33.3333%;
   max-width: 33.3333%;
 }
 .pc-5 {
   display: block;
-  border-right: 1px solid rgba(0,0,0, .3);
   flex: 0 0 41.6667%;
   max-width: 41.6667%;
 }
 .pc-6 {
   display: block;
-  border-right: 1px solid rgba(0,0,0, .3);
   flex: 0 0 50%;
   max-width: 50%;
 }
 .pc-7 {
   display: block;
-  border-right: 1px solid rgba(0,0,0, .3);
   flex: 0 0 58.3333%;
   max-width: 58.3333%;
 }
 .pc-8 {
   display: block;
-  border-right: 1px solid rgba(0,0,0, .3);
   flex: 0 0 66.6667%;
   max-width: 66.6667%;
 }
 .pc-9 {
   display: block;
-  border-right: 1px solid rgba(0,0,0, .3);
   flex: 0 0 75%;
   max-width: 75%;
 }
 .pc-10 {
   display: block;
-  border-right: 1px solid rgba(0,0,0, .3);
   flex: 0 0 83.3333%;
   max-width: 25%;
 }
 .pc-11 {
   display: block;
-  border-right: 1px solid rgba(0,0,0, .3);
   flex: 0 0 91.6667%;
   max-width: 25%;
 }
 .pc-12 {
   display: block;
-  border-right: 1px solid rgba(0,0,0, .3);
   flex: 0 0 100%;
   max-width: 100%;
 }
