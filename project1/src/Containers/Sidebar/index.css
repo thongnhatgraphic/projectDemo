@@ -1,0 +1,16 @@
+
+.sidebar {
+    width: 300px;
+    height: 100%;
+    display: flex;
+    padding: 20px;
+    background-color: rgb(252, 252, 252);
+}
+.sidebar--list {
+    list-style-type: none;
+    color: var(--text-color)
+}
+.sidebar--list--item {
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
