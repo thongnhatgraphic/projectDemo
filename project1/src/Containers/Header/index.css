@@ -9,11 +9,12 @@
 .header__shadow {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     position: fixed;
-    z-index: 100;
+    z-index: 10000;
 }
 .header--title {
     flex-grow: 1;
     text-align: center;
+    background-color: white;
 }
 .header--title__content {
     line-height: 100px;
@@ -22,6 +23,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 .space {
     padding-top: 100px;

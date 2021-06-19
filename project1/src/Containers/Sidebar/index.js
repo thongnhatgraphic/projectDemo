@@ -12,13 +12,13 @@ function Sidebar(props) {
         <div className="sidebar">
             <ul className="sidebar--list">
                 <li className="sidebar--list--item">
-                    item1
+                    item1 hgahdggd
                 </li>
                 <li className="sidebar--list--item">
-                    item1
+                    item1 uhduadu
                 </li>
                 <li className="sidebar--list--item">
-                    item1
+                    item1 huhdauhd
                 </li>
                 <li className="sidebar--list--item">
                     item1

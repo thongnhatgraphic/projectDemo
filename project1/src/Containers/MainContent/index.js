@@ -1,6 +1,9 @@
-import React from 'react';
+import { DislikeOutlined, LikeOutlined, StarFilled, StarOutlined } from '@ant-design/icons';
+import { Pagination } from 'antd';
+import 'antd/dist/antd.css';
+import React, { useState } from 'react';
 import "./index.css";
-import { StarOutlined, StarFilled } from '@ant-design/icons';
+
 // import PropTypes from 'prop-types';
 
 // MainContent.propTypes = {sss
@@ -8,12 +11,13 @@ import { StarOutlined, StarFilled } from '@ant-design/icons';
 // };
 
 function MainContent(props) {
+    const [current, setCurrent] = useState(1)
     const booksCollection = [
         {
             id: "1",
             name: "Three KingDom",
             author: "La Quang Trung",
-            rate: 5,
+            rate: 3,
             linkImage: "https://salt.tikicdn.com/media/catalog/product/t/a/tam-quoc-dien-nghia-3-tap.jpg",
             like: true
         },
@@ -24,19 +28,35 @@ function MainContent(props) {
             rate: 4,
             linkImage: "https://conhocgioi.com/wp-content/uploads/2019/06/1488509319914_4461293-900x550.jpg",
             like: false
+        },
+        {
+            id: "3",
+            name: "Harry potter asdsa ",
+            author: "J.K. Rowling",
+            rate: 4,
+            linkImage: "https://conhocgioi.com/wp-content/uploads/2019/06/1488509319914_4461293-900x550.jpg",
+            like: false
+        }
+        ,
+        {
+            id: "4",
+            name: "Harry potter d",
+            author: "J.K. Rowling",
+            rate: 4,
+            linkImage: "https://conhocgioi.com/wp-content/uploads/2019/06/1488509319914_4461293-900x550.jpg",
+            like: false
         }
     ]
 
     const displayRate = (countStar) => {
-        var i = 1;
+        var i = 0;
         let result = [];
-        for ( i ; i < countStar; i++ ) {
-            result.push(<StarFilled key={i}/>)
+        for (i; i < countStar; i++) {
+            result.push(<StarFilled key={i} style={{color: "#e3e31b", fontSize: "18px"}}/>)
+        };
+        for (let j = 0; j < 5 - i; j++) {
+            result.push(<StarOutlined key={i + j} style={{color: "#e3e31b", fontSize: "18px"}}/>)
         }
-        for ( let j = 0 ; j > 5-i+1  ; i--) {
-            result.push(<StarOutlined key ={i+j}/>)
-        }
-
         return result
     }
 
@@ -58,16 +78,30 @@ function MainContent(props) {
             <p className="maicontent__author">{item.author}</p>
             <div className="maicontent__rate">
                 <div>{displayRate(item.rate).map(item => item)}</div>
-                <small>{item.like ? "Like" : "Like yet"}</small>
+                <small>
+                    {item.like ?
+                        <LikeOutlined className="maicontent__like" style={{ color: "blue", fontSize: "20px" }} /> :
+                        <DislikeOutlined className="maicontent__dislike"
+                            style={{ color: "red", fontSize: "20px" }} />}
+                </small>
             </div>
         </div>
     })
-
+    const onChange = page => {
+        console.log(page);
+        setCurrent(page)
+    };
     return (
         <>
             <div className="maincontent">
                 <div className="grid--row">
                     {renderListBook}
+                </div>
+                <div className="maicontent--pagination">
+                    <Pagination 
+                    defaultCurrent={current}
+                    onChange={onChange}
+                    total={50} className="maicontent--pagination__list" />
                 </div>
             </div>
         </>
