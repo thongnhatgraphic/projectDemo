@@ -19,11 +19,13 @@
 .header--title__content {
     line-height: 100px;
     letter-spacing: 10px;
-    background: -webkit-linear-gradient(red, yellow);
+    background: -webkit-linear-gradient(Blue, rgb(0, 0, 0));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
+    font-size: 24px;
+    margin: 0;
 }
 .space {
     padding-top: 100px;

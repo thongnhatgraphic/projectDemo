@@ -1,4 +1,4 @@
-import { DislikeOutlined, LikeOutlined, StarFilled, StarOutlined } from '@ant-design/icons';
+import { LikeOutlined, StarFilled, StarOutlined, LikeFilled  } from '@ant-design/icons';
 import { Pagination } from 'antd';
 import 'antd/dist/antd.css';
 import React, { useState } from 'react';
@@ -31,7 +31,7 @@ function MainContent(props) {
         },
         {
             id: "3",
-            name: "Harry potter asdsa ",
+            name: "Harry potter asdsa đasads ",
             author: "J.K. Rowling",
             rate: 4,
             linkImage: "https://conhocgioi.com/wp-content/uploads/2019/06/1488509319914_4461293-900x550.jpg",
@@ -64,10 +64,12 @@ function MainContent(props) {
         return <div className="col pc-3 md-4 mb-6" key={item.name}>
             <div className="maincontent__img">
                 <div className="maincontent__imgborder">
+                    <div className="maincontent__imgborder__padding">
                     <img src={item.linkImage}
                         alt="books imgs"
                         title={item.name}
                     />
+                    </div>
                 </div>
             </div>
             <div className="maicontent__name">
@@ -80,9 +82,9 @@ function MainContent(props) {
                 <div>{displayRate(item.rate).map(item => item)}</div>
                 <small>
                     {item.like ?
-                        <LikeOutlined className="maicontent__like" style={{ color: "blue", fontSize: "20px" }} /> :
-                        <DislikeOutlined className="maicontent__dislike"
-                            style={{ color: "red", fontSize: "20px" }} />}
+                        <LikeFilled className="maicontent__like" style={{ color: "blue", fontSize: "20px" }} /> :
+                        <LikeOutlined className="maicontent__dislike"
+                            style={{ color: "grey", fontSize: "20px" }} />}
                 </small>
             </div>
         </div>

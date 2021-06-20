@@ -12,16 +12,13 @@ function Sidebar(props) {
         <div className="sidebar">
             <ul className="sidebar--list">
                 <li className="sidebar--list--item">
-                    item1 hgahdggd
+                Collection of books
                 </li>
                 <li className="sidebar--list--item">
-                    item1 uhduadu
+                favorite books
                 </li>
                 <li className="sidebar--list--item">
-                    item1 huhdauhd
-                </li>
-                <li className="sidebar--list--item">
-                    item1
+                featured book
                 </li>
             </ul>
         </div>
